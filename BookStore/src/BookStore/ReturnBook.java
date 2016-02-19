@@ -1,3 +1,4 @@
+//referenced Prof Marshall's teams2016
 package BookStore;
 
 public class ReturnBook extends booksuper{
@@ -32,7 +33,7 @@ public class ReturnBook extends booksuper{
 		return (author);
 	}
 
-	public int getserial(){
+	public int getserial(){ // use this method instead of parent method
 		return (serial);
 	}
 

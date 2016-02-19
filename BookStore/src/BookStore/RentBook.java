@@ -1,3 +1,4 @@
+// Referenced Prof Marshall's teams2016
 package BookStore;
 
 public class RentBook extends booksuper{
@@ -16,9 +17,9 @@ public class RentBook extends booksuper{
 		
 		author = "J.M. Barrie";
 		
-		serial = 2222;
+		serial = 2222;  // not used in this subclass
 		
-		card = 0000000;
+		card = 0000000;  // not used in this subclass
 	}
 	
 	@Override		
@@ -31,7 +32,9 @@ public class RentBook extends booksuper{
 		return (author);
 	}
 
-
+	public int getserial(){
+		return (serial);
+	}
 
 
 

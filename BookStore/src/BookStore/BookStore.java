@@ -8,7 +8,7 @@ public class BookStore {
 
 	
 	private static String[] books = {" 1. The Time Machine", " 2. The Three Musketeers", " 3. Hound of Baskerville", " 4. Little Women", " 5. Jurassic Park", " 6. A Light in the Attic", " 7. All Creatures Great and Small"};
-	private double [][] prices = {{7.99, 8.47, 4.75, 9.99, 8.99, 10.00, 11.50}, {10.00, 11.95, 9.00, 15.00, 15.75, 17.00, 18.95}};  // soft cover and hard cover prices
+	//private double [][] prices = {{7.99, 8.47, 4.75, 9.99, 8.99, 10.00, 11.50}, {10.00, 11.95, 9.00, 15.00, 15.75, 17.00, 18.95}};  // soft cover and hard cover prices
 	
 	private static int bookselect; // book user selects
 	static boolean continueLoop = true;
@@ -18,8 +18,10 @@ public class BookStore {
 	
 			Scanner myscan = new Scanner(System.in);
 			
+			try{Thread.sleep(3000);}
+			catch (Exception e){};
 			
-			System.out.println("These are all the titles we currently have in stock");
+			System.out.println("\nThere is currently a stack of free books at the counter, feel free to take one.");
 			
 			try{Thread.sleep(3000);}
 			catch (Exception e){};
@@ -28,9 +30,9 @@ public class BookStore {
 				System.out.println (books [row]);
 			}
 			
-				System.out.print("Please enter the number of the book you would like to purchase: ");
+				System.out.print("\nPlease enter the number of the free book you would like to take home: ");
 			
-		do // dvide by zero exception handling on pp 435-436
+		do // divide by zero exception handling on pp 435-436
 			{
 				try 
 				{	
@@ -79,6 +81,8 @@ public class BookStore {
 			while (continueLoop);
 	
 			myscan.close();
+			
+			System.out.println("\nThank you for supporting your local library!");
 	}
 		
 }
